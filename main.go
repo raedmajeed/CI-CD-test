@@ -5,7 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"log"
-	"os"
 )
 
 func main() {
@@ -14,7 +13,7 @@ func main() {
 	if err := godotenv.Load(); err != nil {
 		log.Fatal("unable to load env")
 	}
-	if err := r.Run(":" + os.Getenv("PORT")); err != nil {
+	if err := r.Run(":8089"); err != nil {
 		log.Fatal("unable to start on port")
 	}
 }
