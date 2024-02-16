@@ -1,7 +1,6 @@
 package pkg
 
 import (
-	"flag"
 	"github.com/gin-gonic/gin"
 	"log"
 )
@@ -11,7 +10,5 @@ func Handler(r *gin.Engine) {
 }
 
 func testFunction(ctx *gin.Context) {
-	testVal := flag.String("v", "1", "test value")
-	flag.Parse()
-	log.Printf("Run v %v successful", *testVal)
+	log.Println("RUN IS SUCCESSFUL")
 }
