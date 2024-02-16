@@ -24,4 +24,4 @@ jobs:
           echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Start new process in the background
-        run: go run cmd/api/main.go -v 45 &
+        run: go run main.go -v 45 &
