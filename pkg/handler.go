@@ -13,5 +13,5 @@ func Handler(r *gin.Engine) {
 func testFunction(ctx *gin.Context) {
 	testVal := flag.String("v", "1", "test value")
 	flag.Parse()
-	log.Printf("Run %v successful", *testVal)
+	log.Printf("Run v %v successful", *testVal)
 }
