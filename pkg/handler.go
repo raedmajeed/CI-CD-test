@@ -3,6 +3,7 @@ package pkg
 import (
 	"github.com/gin-gonic/gin"
 	"log"
+	"net/http"
 )
 
 func Handler(r *gin.Engine) {
@@ -10,5 +11,8 @@ func Handler(r *gin.Engine) {
 }
 
 func testFunction(ctx *gin.Context) {
-	log.Println("RUN IS SUCCESSFUL")
+	log.Println("RUN IS SUCCESSFUL here")
+	ctx.JSON(http.StatusOK, gin.H{
+		"success": "true",
+	})
 }
