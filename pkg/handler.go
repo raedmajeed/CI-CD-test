@@ -13,6 +13,6 @@ func Handler(r *gin.Engine) {
 func testFunction(ctx *gin.Context) {
 	log.Println("RUN IS SUCCESSFUL here")
 	ctx.JSON(http.StatusOK, gin.H{
-		"success": "true",
+		"success": "false",
 	})
 }
